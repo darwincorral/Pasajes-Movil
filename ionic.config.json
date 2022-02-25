@@ -1,0 +1,7 @@
+{
+  "name": "pasajesMovil",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

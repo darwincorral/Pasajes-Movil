@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border">
+    <ion-item color="danger" lines="none">
+        <ion-label><strong>{{transporte.username}} #{{transporte.numeroUnidad}}</strong></ion-label>
+        <ion-icon slot="end" (click)="cerrarSession()" name="ellipsis-vertical"></ion-icon>
+    </ion-item>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-text-center">
+    <ion-grid id="inicio" fixed>
+        <ion-label style="font-size: 30px;" color="light"><strong>QUINDE ÑAN</strong></ion-label>
+    </ion-grid>
+    <ion-row *ngIf="saldo==null">
+        <ion-col size="12" (click)="iniciarRuta()">
+            <img style="margin-top:120px" width="200px"  src="assets/imgs/iniciar.png">
+        </ion-col>
+        <ion-col size="12">
+            <ion-label (click)="iniciarRuta()" style="font-size: 30px;" *ngIf="iniciar"><strong>INICIAR RUTA</strong></ion-label>
+            <ion-label style="font-size: 30px;" *ngIf="!iniciar"><strong>Espere por favor</strong></ion-label>
+        </ion-col>
+    </ion-row>
+    <ion-row *ngIf="saldo !=null">
+        <ion-col size="12">
+            <img *ngIf="saldo" style="margin-top:120px" width="200px"  src="assets/imgs/pagado.png">
+            <img *ngIf="!saldo" style="margin-top:120px" width="200px"  src="assets/imgs/nopagado.png">
+        </ion-col>
+        <ion-col size="12">
+            <ion-label style="font-size: 30px;" *ngIf="saldo"><strong>Pago Exitoso!</strong></ion-label><br>
+            <ion-label style="font-size: 20px;" *ngIf="saldo && mostrarSaldo!=null">Saldo Usuario </ion-label>
+            <ion-label style="font-size: 30px;" *ngIf="saldo && mostrarSaldo!=null" color="danger"><strong>${{mostrarSaldo | number : '1.2-2'}}</strong></ion-label>
+            <ion-label style="font-size: 30px;" *ngIf="!saldo"><strong>Sin Saldo!</strong></ion-label>
+        </ion-col>
+    </ion-row>
+</ion-content>

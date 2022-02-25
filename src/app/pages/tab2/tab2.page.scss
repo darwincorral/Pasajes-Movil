@@ -1,0 +1,30 @@
+#inicio {
+    height: 100px;
+    background-color: #eb445a;
+    width: 100%;
+    padding-top: 25px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.centerImg {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.centerText {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.list-param {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0px;
+    z-index: 3 !important;
+    margin: 0px;
+    border-radius: 0px;
+}

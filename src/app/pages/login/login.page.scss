@@ -1,0 +1,35 @@
+.mainSlide,
+.mainSlide ion-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.page {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    z-index: 2;
+}
+
+ion-item {
+    --highlight-color-focused: #371989;
+    // --border-color: var(--ion-color-danger, #f1453d);
+}
+
+.version {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+.titleBack {
+    position: absolute;
+    z-index: 100;
+    margin-left: 0%;
+    width: 25%;
+    text-align: center;
+    color: #ffffff
+}
